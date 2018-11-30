@@ -1,0 +1,6 @@
+com\ezcloud\technologies\employee\service\config\Configuration.class
+com\ezcloud\technologies\employee\service\controller\EmployeeController.class
+com\ezcloud\technologies\employee\service\model\Employee$EmployeeBuilder.class
+com\ezcloud\technologies\employee\service\repository\EmployeeRepository.class
+com\ezcloud\technologies\employee\service\EmployeeApplication.class
+com\ezcloud\technologies\employee\service\model\Employee.class

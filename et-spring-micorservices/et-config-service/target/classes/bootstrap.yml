@@ -1,0 +1,11 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: ml-configuration-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/longwe/git-localconfig-repo.git
+ 

@@ -11,12 +11,15 @@ import org.springframework.context.annotation.Bean;
 import com.ezcloud.technologies.employee.service.model.Employee;
 import com.ezcloud.technologies.employee.service.repository.EmployeeRepository;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 /**
  * @author sr4mxl
  *
  */
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableSwagger2
 public class EmployeeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeeApplication.class, args);

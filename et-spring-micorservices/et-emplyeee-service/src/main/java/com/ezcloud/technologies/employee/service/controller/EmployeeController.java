@@ -29,6 +29,7 @@ import io.swagger.annotations.AuthorizationScope;
  * @author sr4mxl
  *
  */
+//@RequestMapping("/v1/employees")
 @RestController
 @Api(value = "/", authorizations = { @Authorization(value = "employee_auth", scopes = {
 		@AuthorizationScope(scope = "write:employees", description = "modify employees in your departments"),
@@ -40,13 +41,15 @@ public class EmployeeController {
 	@Autowired
 	EmployeeRepository repository;
 
-	@PostMapping("/")
+	protected final String URI_PREFIX = "/v1/api/employees";
+
+	@PostMapping(URI_PREFIX)
 	public Employee add(@RequestBody Employee employee) {
 		LOGGER.info("Employee add: {}", employee);
 		return repository.add(employee);
 	}
 
-	@GetMapping("/{id}")
+	@GetMapping(URI_PREFIX + "/{id}")
 	@ApiOperation("Find employee by id")
 	@ApiResponses(value = { @ApiResponse(code = 400, message = "Invalid id supplied "),
 			@ApiResponse(code = 404, message = "Employee not found") })
@@ -56,7 +59,7 @@ public class EmployeeController {
 		return repository.findById(id);
 	}
 
-	@GetMapping("/")
+	@GetMapping(URI_PREFIX)
 	@ApiOperation("Find Employees")
 	@ApiResponses(value = { @ApiResponse(code = 400, message = "Invalid url supplied"),
 			@ApiResponse(code = 404, message = "Employees not found") })
@@ -65,7 +68,7 @@ public class EmployeeController {
 		return repository.findAll();
 	}
 
-	@GetMapping("/department/{departmentId}")
+	@GetMapping(URI_PREFIX + "/department/{departmentId}")
 	@ApiOperation("Find department by departmentId")
 	@ApiResponses(value = { @ApiResponse(code = 400, message = "Invalid departmentId supplied "),
 			@ApiResponse(code = 404, message = "Department not found") })
@@ -75,7 +78,7 @@ public class EmployeeController {
 		return repository.findByDepartment(departmentId);
 	}
 
-	@GetMapping("/organization/{organizationId}")
+	@GetMapping(URI_PREFIX + "/organization/{organizationId}")
 	@ApiOperation("Find organization by organizationId")
 	@ApiResponses(value = { @ApiResponse(code = 400, message = "Invalid organizationId supplied "),
 			@ApiResponse(code = 404, message = "Organization not found") })

@@ -14,6 +14,8 @@
     <module>et-emplyeee-service</module>
     <module>et-department-service</module>
     <module>et-organization-service</module>
+    <module>et-gateway-service</module>
+    <module>et-proxy-service</module>
   </modules>
 
 </project>

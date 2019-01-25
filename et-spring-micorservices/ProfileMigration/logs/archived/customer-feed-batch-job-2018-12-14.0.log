@@ -1,0 +1,586 @@
+2018-12-14 12:03:15,072 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerFeedBatchApplication on VTP3102 with PID 4680 (C:\projects\java\ProfileMigration\target\classes started by sr4mxl in C:\projects\java\ProfileMigration)
+2018-12-14 12:03:15,102 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: DEV
+2018-12-14 12:03:15,270 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 12:03:15 EST 2018]; root of context hierarchy
+2018-12-14 12:03:16,713 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory [main] Overriding bean definition for bean 'transactionManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/batch/core/configuration/annotation/SimpleBatchConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=batchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/talbots/customer/feed/batch/BatchConfiguration.class]]
+2018-12-14 12:03:18,756 INFO org.springframework.jdbc.datasource.DriverManagerDataSource [main] Loaded JDBC driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2018-12-14 12:03:19,470 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2018-12-14 12:03:19,479 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2018-12-14 12:03:19,707 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-12-14 12:03:20,732 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2018-12-14 12:03:21,002 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2018-12-14 12:03:22,462 INFO org.springframework.orm.hibernate5.HibernateTransactionManager [main] Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@3d8bbcdc] of Hibernate SessionFactory for HibernateTransactionManager
+2018-12-14 12:03:24,267 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: SQLSERVER
+2018-12-14 12:03:24,877 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2018-12-14 12:03:25,684 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2018-12-14 12:03:25,729 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerFeedBatchApplication in 12.7 seconds (JVM running for 15.098)
+2018-12-14 12:03:25,735 INFO org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner [main] Running default command line with: [--spring.output.ansi.enabled=always]
+2018-12-14 12:03:26,347 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] launched with the following parameters: [{-spring.output.ansi.enabled=always, run.id=18}]
+2018-12-14 12:03:26,527 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [step1]
+2018-12-14 12:03:26,930 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 1000099
+2018-12-14 12:03:26,931 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 1000121
+2018-12-14 12:03:26,931 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 102413741
+2018-12-14 12:03:26,932 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 1030100
+2018-12-14 12:03:26,932 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 105417695
+2018-12-14 12:03:26,933 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 10831214
+2018-12-14 12:03:26,933 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 10841277
+2018-12-14 12:03:26,934 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 111972731
+2018-12-14 12:03:26,934 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 111992323
+2018-12-14 12:03:26,935 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 111992744
+2018-12-14 12:03:26,941 INFO org.springframework.oxm.jaxb.Jaxb2Marshaller [main] Creating JAXBContext with classes to be bound [class com.talbots.customer.feed.domain.Customer]
+2018-12-14 12:03:27,376 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] completed with the following parameters: [{-spring.output.ansi.enabled=always, run.id=18}] and the following status: [COMPLETED]
+2018-12-14 12:03:27,380 INFO org.springframework.context.support.AbstractApplicationContext [Thread-2] Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 12:03:15 EST 2018]; root of context hierarchy
+2018-12-14 12:03:27,384 INFO org.springframework.jmx.export.MBeanExporter [Thread-2] Unregistering JMX-exposed beans on shutdown
+2018-12-14 12:18:04,886 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerFeedBatchApplication on VTP3102 with PID 9152 (C:\projects\java\ProfileMigration\target\classes started by sr4mxl in C:\projects\java\ProfileMigration)
+2018-12-14 12:18:04,906 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: DEV
+2018-12-14 12:18:05,073 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 12:18:05 EST 2018]; root of context hierarchy
+2018-12-14 12:18:06,392 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory [main] Overriding bean definition for bean 'transactionManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/batch/core/configuration/annotation/SimpleBatchConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=batchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/talbots/customer/feed/batch/BatchConfiguration.class]]
+2018-12-14 12:18:08,449 INFO org.springframework.jdbc.datasource.DriverManagerDataSource [main] Loaded JDBC driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2018-12-14 12:18:09,157 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2018-12-14 12:18:09,165 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2018-12-14 12:18:09,382 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-12-14 12:18:10,390 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2018-12-14 12:18:10,637 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2018-12-14 12:18:11,887 INFO org.springframework.orm.hibernate5.HibernateTransactionManager [main] Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@3d8bbcdc] of Hibernate SessionFactory for HibernateTransactionManager
+2018-12-14 12:18:13,625 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: SQLSERVER
+2018-12-14 12:18:14,229 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2018-12-14 12:18:15,024 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2018-12-14 12:18:15,066 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerFeedBatchApplication in 12.073 seconds (JVM running for 14.342)
+2018-12-14 12:18:15,071 INFO org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner [main] Running default command line with: [--spring.output.ansi.enabled=always]
+2018-12-14 12:18:15,636 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] launched with the following parameters: [{-spring.output.ansi.enabled=always, run.id=19}]
+2018-12-14 12:18:15,784 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [step1]
+2018-12-14 12:18:16,136 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 127543897
+2018-12-14 12:18:16,137 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 232888043
+2018-12-14 12:18:16,138 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262561742
+2018-12-14 12:18:16,138 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262561742
+2018-12-14 12:18:16,139 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262561742
+2018-12-14 12:18:16,139 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 273168392
+2018-12-14 12:18:16,140 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 273630857
+2018-12-14 12:18:16,140 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 275472698
+2018-12-14 12:18:16,141 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 275844891
+2018-12-14 12:18:16,141 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 275844891
+2018-12-14 12:18:16,146 INFO org.springframework.oxm.jaxb.Jaxb2Marshaller [main] Creating JAXBContext with classes to be bound [class com.talbots.customer.feed.domain.Customer]
+2018-12-14 12:18:16,567 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] completed with the following parameters: [{-spring.output.ansi.enabled=always, run.id=19}] and the following status: [COMPLETED]
+2018-12-14 12:18:16,571 INFO org.springframework.context.support.AbstractApplicationContext [Thread-2] Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 12:18:05 EST 2018]; root of context hierarchy
+2018-12-14 12:18:16,575 INFO org.springframework.jmx.export.MBeanExporter [Thread-2] Unregistering JMX-exposed beans on shutdown
+2018-12-14 13:06:05,396 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerFeedBatchApplication on VTP3102 with PID 10256 (C:\projects\java\ProfileMigration\target\classes started by sr4mxl in C:\projects\java\ProfileMigration)
+2018-12-14 13:06:05,416 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: DEV
+2018-12-14 13:06:05,584 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 13:06:05 EST 2018]; root of context hierarchy
+2018-12-14 13:06:06,911 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory [main] Overriding bean definition for bean 'transactionManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/batch/core/configuration/annotation/SimpleBatchConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=batchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/talbots/customer/feed/batch/BatchConfiguration.class]]
+2018-12-14 13:06:08,950 INFO org.springframework.jdbc.datasource.DriverManagerDataSource [main] Loaded JDBC driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2018-12-14 13:06:09,666 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2018-12-14 13:06:09,675 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2018-12-14 13:06:09,897 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-12-14 13:06:10,942 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2018-12-14 13:06:11,187 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2018-12-14 13:06:12,482 INFO org.springframework.orm.hibernate5.HibernateTransactionManager [main] Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@3d8bbcdc] of Hibernate SessionFactory for HibernateTransactionManager
+2018-12-14 13:06:14,270 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: SQLSERVER
+2018-12-14 13:06:14,868 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2018-12-14 13:06:15,664 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2018-12-14 13:06:15,706 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerFeedBatchApplication in 12.273 seconds (JVM running for 14.537)
+2018-12-14 13:06:15,712 INFO org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner [main] Running default command line with: [--spring.output.ansi.enabled=always]
+2018-12-14 13:06:16,278 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] launched with the following parameters: [{-spring.output.ansi.enabled=always, run.id=20}]
+2018-12-14 13:06:16,412 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [step1]
+2018-12-14 13:06:16,522 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader [main] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2018-12-14 13:06:16,780 INFO org.springframework.jdbc.support.SQLErrorCodesFactory [main] SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+2018-12-14 13:06:16,821 ERROR org.springframework.batch.core.step.AbstractStep [main] Encountered an error executing step step1 in job exportCustomerFeedJob
+org.springframework.batch.item.ItemStreamException: Failed to initialize the reader
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.open(AbstractItemCountingItemStreamItemReader.java:149)
+	at org.springframework.batch.item.support.CompositeItemStream.open(CompositeItemStream.java:103)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.open(TaskletStep.java:310)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:197)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:148)
+	at org.springframework.batch.core.job.flow.JobFlowExecutor.executeStep(JobFlowExecutor.java:66)
+	at org.springframework.batch.core.job.flow.support.state.StepState.handle(StepState.java:67)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.resume(SimpleFlow.java:169)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.start(SimpleFlow.java:144)
+	at org.springframework.batch.core.job.flow.FlowJob.doExecute(FlowJob.java:136)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:308)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:141)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:134)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:197)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:127)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy56.run(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.execute(JobLauncherCommandLineRunner.java:163)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.executeLocalJobs(JobLauncherCommandLineRunner.java:179)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.launchJobFromProperties(JobLauncherCommandLineRunner.java:134)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.run(JobLauncherCommandLineRunner.java:128)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:781)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.talbots.customer.feed.CustomerFeedBatchApplication.main(CustomerFeedBatchApplication.java:12)
+Caused by: org.springframework.jdbc.UncategorizedSQLException: Executing query; uncategorized SQLException for SQL [SELECT top (10)   u.id AS id, 
+          u.login, 
+		  sfu.password,   
+		  u.first_name, 
+		  u.last_name, 
+		  u.email, 
+		  u.gender,  
+		  cc.billing_addr as addressId,
+          c.first_name as "ad_first_name",  
+		  c.last_name as "ad_last_name", 
+		  c.address1, 
+		  c.address2, 
+		  c.address3, 
+		  c.city, c.state, 
+          c.postal_code, 
+		  c.country, 
+		  c.phone_number,
+		  dbo.csys_contact_info.address4,
+		  dbo.csys_contact_info.nickname, 
+		  dbo.csys_contact_info.location, 
+		  dbo.csys_contact_info.day_phone, 
+          dbo.csys_contact_info.evening_phone,
+		  dbo.tlb_user.birth_month,
+          dbo.tlb_user.us_citizen_status, 
+	      dbo.tlb_user.classic_awards_member,
+		  dbo.tlb_user.classic_awards_member_number, 
+          dbo.tlb_user.receieve_promo_updates,
+		  csu.promo_signup
+
+FROM     dbo.dps_user AS u LEFT OUTER JOIN
+                      dbo.tlb_user ON u.id = dbo.tlb_user.id LEFT OUTER JOIN
+                      dbo.csys_contact_info RIGHT OUTER JOIN
+                      dbo.dps_usr_creditcard AS uc INNER JOIN
+                      dbo.dps_credit_card AS cc ON uc.credit_card_id = cc.id INNER JOIN
+                      dbo.dps_contact_info AS c ON cc.billing_addr = c.id ON dbo.csys_contact_info.id = c.id ON u.id = uc.user_id
+					  left join sfcc_commerce.dbo.csys_user csu on u.id = csu.id
+					  left join sfcc_commerce.dbo.sfcc_dps_user sfu on u.id = sfu.id
+					  //where dbo.csys_contact_info.address4 is null
+					  where ui.id ='262561742'
+					  order by u.id
+
+
+]; SQL state [S0001]; error code [102]; Incorrect syntax near '/'.; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: Incorrect syntax near '/'.
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.batch.item.database.JdbcCursorItemReader.openCursor(JdbcCursorItemReader.java:131)
+	at org.springframework.batch.item.database.AbstractCursorItemReader.doOpen(AbstractCursorItemReader.java:426)
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.open(AbstractItemCountingItemStreamItemReader.java:146)
+	... 34 common frames omitted
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Incorrect syntax near '/'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:156)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1373)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:371)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:322)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:4003)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1550)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:160)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:133)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.executeQuery(SQLServerPreparedStatement.java:265)
+	at org.springframework.batch.item.database.JdbcCursorItemReader.openCursor(JdbcCursorItemReader.java:126)
+	... 36 common frames omitted
+2018-12-14 13:06:16,908 ERROR org.springframework.batch.core.step.AbstractStep [main] Exception while closing step execution resources in step step1 in job exportCustomerFeedJob
+org.springframework.batch.item.ItemStreamException: Error while closing item reader
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.close(AbstractItemCountingItemStreamItemReader.java:138)
+	at org.springframework.batch.item.support.CompositeItemStream.close(CompositeItemStream.java:89)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.close(TaskletStep.java:305)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:271)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:148)
+	at org.springframework.batch.core.job.flow.JobFlowExecutor.executeStep(JobFlowExecutor.java:66)
+	at org.springframework.batch.core.job.flow.support.state.StepState.handle(StepState.java:67)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.resume(SimpleFlow.java:169)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.start(SimpleFlow.java:144)
+	at org.springframework.batch.core.job.flow.FlowJob.doExecute(FlowJob.java:136)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:308)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:141)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:134)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:197)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:127)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy56.run(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.execute(JobLauncherCommandLineRunner.java:163)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.executeLocalJobs(JobLauncherCommandLineRunner.java:179)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.launchJobFromProperties(JobLauncherCommandLineRunner.java:134)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.run(JobLauncherCommandLineRunner.java:128)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:781)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.talbots.customer.feed.CustomerFeedBatchApplication.main(CustomerFeedBatchApplication.java:12)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The connection is closed.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:130)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:294)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.setAutoCommit(SQLServerConnection.java:1728)
+	at org.springframework.batch.item.database.AbstractCursorItemReader.doClose(AbstractCursorItemReader.java:400)
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.close(AbstractItemCountingItemStreamItemReader.java:135)
+	... 34 common frames omitted
+2018-12-14 13:06:16,956 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] completed with the following parameters: [{-spring.output.ansi.enabled=always, run.id=20}] and the following status: [FAILED]
+2018-12-14 13:06:16,960 INFO org.springframework.context.support.AbstractApplicationContext [Thread-2] Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 13:06:05 EST 2018]; root of context hierarchy
+2018-12-14 13:06:16,965 INFO org.springframework.jmx.export.MBeanExporter [Thread-2] Unregistering JMX-exposed beans on shutdown
+2018-12-14 13:07:14,819 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerFeedBatchApplication on VTP3102 with PID 22652 (C:\projects\java\ProfileMigration\target\classes started by sr4mxl in C:\projects\java\ProfileMigration)
+2018-12-14 13:07:14,839 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: DEV
+2018-12-14 13:07:15,012 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 13:07:15 EST 2018]; root of context hierarchy
+2018-12-14 13:07:16,410 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory [main] Overriding bean definition for bean 'transactionManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/batch/core/configuration/annotation/SimpleBatchConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=batchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/talbots/customer/feed/batch/BatchConfiguration.class]]
+2018-12-14 13:07:18,536 INFO org.springframework.jdbc.datasource.DriverManagerDataSource [main] Loaded JDBC driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2018-12-14 13:07:19,288 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2018-12-14 13:07:19,296 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2018-12-14 13:07:19,532 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-12-14 13:07:20,610 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2018-12-14 13:07:20,843 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2018-12-14 13:07:22,168 INFO org.springframework.orm.hibernate5.HibernateTransactionManager [main] Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@117e0fe5] of Hibernate SessionFactory for HibernateTransactionManager
+2018-12-14 13:07:24,107 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: SQLSERVER
+2018-12-14 13:07:24,804 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2018-12-14 13:07:25,717 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2018-12-14 13:07:25,766 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerFeedBatchApplication in 12.857 seconds (JVM running for 15.038)
+2018-12-14 13:07:25,775 INFO org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner [main] Running default command line with: [--spring.output.ansi.enabled=always]
+2018-12-14 13:07:26,544 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] launched with the following parameters: [{-spring.output.ansi.enabled=always, run.id=21}]
+2018-12-14 13:07:26,749 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [step1]
+2018-12-14 13:07:26,942 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader [main] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2018-12-14 13:07:27,128 INFO org.springframework.jdbc.support.SQLErrorCodesFactory [main] SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+2018-12-14 13:07:27,177 ERROR org.springframework.batch.core.step.AbstractStep [main] Encountered an error executing step step1 in job exportCustomerFeedJob
+org.springframework.batch.item.ItemStreamException: Failed to initialize the reader
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.open(AbstractItemCountingItemStreamItemReader.java:149)
+	at org.springframework.batch.item.support.CompositeItemStream.open(CompositeItemStream.java:103)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.open(TaskletStep.java:310)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:197)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:148)
+	at org.springframework.batch.core.job.flow.JobFlowExecutor.executeStep(JobFlowExecutor.java:66)
+	at org.springframework.batch.core.job.flow.support.state.StepState.handle(StepState.java:67)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.resume(SimpleFlow.java:169)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.start(SimpleFlow.java:144)
+	at org.springframework.batch.core.job.flow.FlowJob.doExecute(FlowJob.java:136)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:308)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:141)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:134)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:197)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:127)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy56.run(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.execute(JobLauncherCommandLineRunner.java:163)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.executeLocalJobs(JobLauncherCommandLineRunner.java:179)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.launchJobFromProperties(JobLauncherCommandLineRunner.java:134)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.run(JobLauncherCommandLineRunner.java:128)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:781)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.talbots.customer.feed.CustomerFeedBatchApplication.main(CustomerFeedBatchApplication.java:12)
+Caused by: org.springframework.jdbc.UncategorizedSQLException: Executing query; uncategorized SQLException for SQL [SELECT top (10)   u.id AS id, 
+          u.login, 
+		  sfu.password,   
+		  u.first_name, 
+		  u.last_name, 
+		  u.email, 
+		  u.gender,  
+		  cc.billing_addr as addressId,
+          c.first_name as "ad_first_name",  
+		  c.last_name as "ad_last_name", 
+		  c.address1, 
+		  c.address2, 
+		  c.address3, 
+		  c.city, c.state, 
+          c.postal_code, 
+		  c.country, 
+		  c.phone_number,
+		  dbo.csys_contact_info.address4,
+		  dbo.csys_contact_info.nickname, 
+		  dbo.csys_contact_info.location, 
+		  dbo.csys_contact_info.day_phone, 
+          dbo.csys_contact_info.evening_phone,
+		  dbo.tlb_user.birth_month,
+          dbo.tlb_user.us_citizen_status, 
+	      dbo.tlb_user.classic_awards_member,
+		  dbo.tlb_user.classic_awards_member_number, 
+          dbo.tlb_user.receieve_promo_updates,
+		  csu.promo_signup
+
+FROM     dbo.dps_user AS u LEFT OUTER JOIN
+                      dbo.tlb_user ON u.id = dbo.tlb_user.id LEFT OUTER JOIN
+                      dbo.csys_contact_info RIGHT OUTER JOIN
+                      dbo.dps_usr_creditcard AS uc INNER JOIN
+                      dbo.dps_credit_card AS cc ON uc.credit_card_id = cc.id INNER JOIN
+                      dbo.dps_contact_info AS c ON cc.billing_addr = c.id ON dbo.csys_contact_info.id = c.id ON u.id = uc.user_id
+					  left join sfcc_commerce.dbo.csys_user csu on u.id = csu.id
+					  left join sfcc_commerce.dbo.sfcc_dps_user sfu on u.id = sfu.id
+					  --where dbo.csys_contact_info.address4 is null
+					  where ui.id ='262561742'
+					  order by u.id
+
+
+]; SQL state [S0001]; error code [4104]; The multi-part identifier "ui.id" could not be bound.; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: The multi-part identifier "ui.id" could not be bound.
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.batch.item.database.JdbcCursorItemReader.openCursor(JdbcCursorItemReader.java:131)
+	at org.springframework.batch.item.database.AbstractCursorItemReader.doOpen(AbstractCursorItemReader.java:426)
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.open(AbstractItemCountingItemStreamItemReader.java:146)
+	... 34 common frames omitted
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The multi-part identifier "ui.id" could not be bound.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:156)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1373)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:371)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:322)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:4003)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1550)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:160)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:133)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.executeQuery(SQLServerPreparedStatement.java:265)
+	at org.springframework.batch.item.database.JdbcCursorItemReader.openCursor(JdbcCursorItemReader.java:126)
+	... 36 common frames omitted
+2018-12-14 13:07:27,240 ERROR org.springframework.batch.core.step.AbstractStep [main] Exception while closing step execution resources in step step1 in job exportCustomerFeedJob
+org.springframework.batch.item.ItemStreamException: Error while closing item reader
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.close(AbstractItemCountingItemStreamItemReader.java:138)
+	at org.springframework.batch.item.support.CompositeItemStream.close(CompositeItemStream.java:89)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.close(TaskletStep.java:305)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:271)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:148)
+	at org.springframework.batch.core.job.flow.JobFlowExecutor.executeStep(JobFlowExecutor.java:66)
+	at org.springframework.batch.core.job.flow.support.state.StepState.handle(StepState.java:67)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.resume(SimpleFlow.java:169)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.start(SimpleFlow.java:144)
+	at org.springframework.batch.core.job.flow.FlowJob.doExecute(FlowJob.java:136)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:308)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:141)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:134)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:197)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:127)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy56.run(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.execute(JobLauncherCommandLineRunner.java:163)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.executeLocalJobs(JobLauncherCommandLineRunner.java:179)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.launchJobFromProperties(JobLauncherCommandLineRunner.java:134)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.run(JobLauncherCommandLineRunner.java:128)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:781)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.talbots.customer.feed.CustomerFeedBatchApplication.main(CustomerFeedBatchApplication.java:12)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The connection is closed.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:130)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:294)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.setAutoCommit(SQLServerConnection.java:1728)
+	at org.springframework.batch.item.database.AbstractCursorItemReader.doClose(AbstractCursorItemReader.java:400)
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.close(AbstractItemCountingItemStreamItemReader.java:135)
+	... 34 common frames omitted
+2018-12-14 13:07:27,297 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] completed with the following parameters: [{-spring.output.ansi.enabled=always, run.id=21}] and the following status: [FAILED]
+2018-12-14 13:07:27,301 INFO org.springframework.context.support.AbstractApplicationContext [Thread-2] Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 13:07:15 EST 2018]; root of context hierarchy
+2018-12-14 13:07:27,307 INFO org.springframework.jmx.export.MBeanExporter [Thread-2] Unregistering JMX-exposed beans on shutdown
+2018-12-14 13:08:10,840 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerFeedBatchApplication on VTP3102 with PID 13020 (C:\projects\java\ProfileMigration\target\classes started by sr4mxl in C:\projects\java\ProfileMigration)
+2018-12-14 13:08:10,860 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: DEV
+2018-12-14 13:08:11,025 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 13:08:11 EST 2018]; root of context hierarchy
+2018-12-14 13:08:12,403 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory [main] Overriding bean definition for bean 'transactionManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/batch/core/configuration/annotation/SimpleBatchConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=batchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/talbots/customer/feed/batch/BatchConfiguration.class]]
+2018-12-14 13:08:14,471 INFO org.springframework.jdbc.datasource.DriverManagerDataSource [main] Loaded JDBC driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2018-12-14 13:08:15,159 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2018-12-14 13:08:15,166 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2018-12-14 13:08:15,385 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-12-14 13:08:16,416 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2018-12-14 13:08:16,661 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2018-12-14 13:08:17,950 INFO org.springframework.orm.hibernate5.HibernateTransactionManager [main] Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@3d8bbcdc] of Hibernate SessionFactory for HibernateTransactionManager
+2018-12-14 13:08:19,730 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: SQLSERVER
+2018-12-14 13:08:20,342 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2018-12-14 13:08:21,153 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2018-12-14 13:08:21,196 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerFeedBatchApplication in 12.473 seconds (JVM running for 14.729)
+2018-12-14 13:08:21,202 INFO org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner [main] Running default command line with: [--spring.output.ansi.enabled=always]
+2018-12-14 13:08:21,763 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] launched with the following parameters: [{-spring.output.ansi.enabled=always, run.id=22}]
+2018-12-14 13:08:21,916 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [step1]
+2018-12-14 13:08:21,979 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader [main] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2018-12-14 13:08:22,125 INFO org.springframework.jdbc.support.SQLErrorCodesFactory [main] SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]
+2018-12-14 13:08:22,164 ERROR org.springframework.batch.core.step.AbstractStep [main] Encountered an error executing step step1 in job exportCustomerFeedJob
+org.springframework.batch.item.ItemStreamException: Failed to initialize the reader
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.open(AbstractItemCountingItemStreamItemReader.java:149)
+	at org.springframework.batch.item.support.CompositeItemStream.open(CompositeItemStream.java:103)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.open(TaskletStep.java:310)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:197)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:148)
+	at org.springframework.batch.core.job.flow.JobFlowExecutor.executeStep(JobFlowExecutor.java:66)
+	at org.springframework.batch.core.job.flow.support.state.StepState.handle(StepState.java:67)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.resume(SimpleFlow.java:169)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.start(SimpleFlow.java:144)
+	at org.springframework.batch.core.job.flow.FlowJob.doExecute(FlowJob.java:136)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:308)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:141)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:134)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:197)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:127)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy56.run(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.execute(JobLauncherCommandLineRunner.java:163)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.executeLocalJobs(JobLauncherCommandLineRunner.java:179)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.launchJobFromProperties(JobLauncherCommandLineRunner.java:134)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.run(JobLauncherCommandLineRunner.java:128)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:781)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.talbots.customer.feed.CustomerFeedBatchApplication.main(CustomerFeedBatchApplication.java:12)
+Caused by: org.springframework.jdbc.UncategorizedSQLException: Executing query; uncategorized SQLException for SQL [SELECT top (10)   u.id AS id, 
+          u.login, 
+		  sfu.password,   
+		  u.first_name, 
+		  u.last_name, 
+		  u.email, 
+		  u.gender,  
+		  cc.billing_addr as addressId,
+          c.first_name as "ad_first_name",  
+		  c.last_name as "ad_last_name", 
+		  c.address1, 
+		  c.address2, 
+		  c.address3, 
+		  c.city, c.state, 
+          c.postal_code, 
+		  c.country, 
+		  c.phone_number,
+		  dbo.csys_contact_info.address4,
+		  dbo.csys_contact_info.nickname, 
+		  dbo.csys_contact_info.location, 
+		  dbo.csys_contact_info.day_phone, 
+          dbo.csys_contact_info.evening_phone,
+		  dbo.tlb_user.birth_month,
+          dbo.tlb_user.us_citizen_status, 
+	      dbo.tlb_user.classic_awards_member,
+		  dbo.tlb_user.classic_awards_member_number, 
+          dbo.tlb_user.receieve_promo_updates,
+		  csu.promo_signup
+
+FROM     dbo.dps_user AS u LEFT OUTER JOIN
+                      dbo.tlb_user ON u.id = dbo.tlb_user.id LEFT OUTER JOIN
+                      dbo.csys_contact_info RIGHT OUTER JOIN
+                      dbo.dps_usr_creditcard AS uc INNER JOIN
+                      dbo.dps_credit_card AS cc ON uc.credit_card_id = cc.id INNER JOIN
+                      dbo.dps_contact_info AS c ON cc.billing_addr = c.id ON dbo.csys_contact_info.id = c.id ON u.id = uc.user_id
+					  left join sfcc_commerce.dbo.csys_user csu on u.id = csu.id
+					  left join sfcc_commerce.dbo.sfcc_dps_user sfu on u.id = sfu.id
+					  where ui.id ='262561742'
+					  order by u.id
+
+
+]; SQL state [S0001]; error code [4104]; The multi-part identifier "ui.id" could not be bound.; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: The multi-part identifier "ui.id" could not be bound.
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.batch.item.database.JdbcCursorItemReader.openCursor(JdbcCursorItemReader.java:131)
+	at org.springframework.batch.item.database.AbstractCursorItemReader.doOpen(AbstractCursorItemReader.java:426)
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.open(AbstractItemCountingItemStreamItemReader.java:146)
+	... 34 common frames omitted
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The multi-part identifier "ui.id" could not be bound.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:156)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1373)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:371)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:322)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:4003)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1550)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:160)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:133)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.executeQuery(SQLServerPreparedStatement.java:265)
+	at org.springframework.batch.item.database.JdbcCursorItemReader.openCursor(JdbcCursorItemReader.java:126)
+	... 36 common frames omitted
+2018-12-14 13:08:22,213 ERROR org.springframework.batch.core.step.AbstractStep [main] Exception while closing step execution resources in step step1 in job exportCustomerFeedJob
+org.springframework.batch.item.ItemStreamException: Error while closing item reader
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.close(AbstractItemCountingItemStreamItemReader.java:138)
+	at org.springframework.batch.item.support.CompositeItemStream.close(CompositeItemStream.java:89)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.close(TaskletStep.java:305)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:271)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:148)
+	at org.springframework.batch.core.job.flow.JobFlowExecutor.executeStep(JobFlowExecutor.java:66)
+	at org.springframework.batch.core.job.flow.support.state.StepState.handle(StepState.java:67)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.resume(SimpleFlow.java:169)
+	at org.springframework.batch.core.job.flow.support.SimpleFlow.start(SimpleFlow.java:144)
+	at org.springframework.batch.core.job.flow.FlowJob.doExecute(FlowJob.java:136)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:308)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:141)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:134)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:197)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:127)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy56.run(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.execute(JobLauncherCommandLineRunner.java:163)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.executeLocalJobs(JobLauncherCommandLineRunner.java:179)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.launchJobFromProperties(JobLauncherCommandLineRunner.java:134)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner.run(JobLauncherCommandLineRunner.java:128)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:781)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.talbots.customer.feed.CustomerFeedBatchApplication.main(CustomerFeedBatchApplication.java:12)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: The connection is closed.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:130)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.checkClosed(SQLServerConnection.java:294)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.setAutoCommit(SQLServerConnection.java:1728)
+	at org.springframework.batch.item.database.AbstractCursorItemReader.doClose(AbstractCursorItemReader.java:400)
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.close(AbstractItemCountingItemStreamItemReader.java:135)
+	... 34 common frames omitted
+2018-12-14 13:08:22,264 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] completed with the following parameters: [{-spring.output.ansi.enabled=always, run.id=22}] and the following status: [FAILED]
+2018-12-14 13:08:22,268 INFO org.springframework.context.support.AbstractApplicationContext [Thread-2] Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 13:08:11 EST 2018]; root of context hierarchy
+2018-12-14 13:08:22,274 INFO org.springframework.jmx.export.MBeanExporter [Thread-2] Unregistering JMX-exposed beans on shutdown
+2018-12-14 13:09:09,740 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerFeedBatchApplication on VTP3102 with PID 12896 (C:\projects\java\ProfileMigration\target\classes started by sr4mxl in C:\projects\java\ProfileMigration)
+2018-12-14 13:09:09,760 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: DEV
+2018-12-14 13:09:09,926 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 13:09:09 EST 2018]; root of context hierarchy
+2018-12-14 13:09:11,269 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory [main] Overriding bean definition for bean 'transactionManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/batch/core/configuration/annotation/SimpleBatchConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=batchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/talbots/customer/feed/batch/BatchConfiguration.class]]
+2018-12-14 13:09:13,458 INFO org.springframework.jdbc.datasource.DriverManagerDataSource [main] Loaded JDBC driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2018-12-14 13:09:14,287 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2018-12-14 13:09:14,296 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2018-12-14 13:09:14,536 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-12-14 13:09:15,537 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2018-12-14 13:09:15,779 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2018-12-14 13:09:17,042 INFO org.springframework.orm.hibernate5.HibernateTransactionManager [main] Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@3d8bbcdc] of Hibernate SessionFactory for HibernateTransactionManager
+2018-12-14 13:09:18,846 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: SQLSERVER
+2018-12-14 13:09:19,448 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2018-12-14 13:09:20,238 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2018-12-14 13:09:20,281 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerFeedBatchApplication in 12.487 seconds (JVM running for 14.644)
+2018-12-14 13:09:20,287 INFO org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner [main] Running default command line with: [--spring.output.ansi.enabled=always]
+2018-12-14 13:09:20,838 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] launched with the following parameters: [{-spring.output.ansi.enabled=always, run.id=23}]
+2018-12-14 13:09:20,986 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [step1]
+2018-12-14 13:09:21,270 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262561742
+2018-12-14 13:09:21,271 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262561742
+2018-12-14 13:09:21,272 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262561742
+2018-12-14 13:09:21,277 INFO org.springframework.oxm.jaxb.Jaxb2Marshaller [main] Creating JAXBContext with classes to be bound [class com.talbots.customer.feed.domain.Customer]
+2018-12-14 13:09:21,673 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] completed with the following parameters: [{-spring.output.ansi.enabled=always, run.id=23}] and the following status: [COMPLETED]
+2018-12-14 13:09:21,677 INFO org.springframework.context.support.AbstractApplicationContext [Thread-2] Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Fri Dec 14 13:09:09 EST 2018]; root of context hierarchy
+2018-12-14 13:09:21,683 INFO org.springframework.jmx.export.MBeanExporter [Thread-2] Unregistering JMX-exposed beans on shutdown

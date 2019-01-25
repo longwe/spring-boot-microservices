@@ -1,0 +1,122 @@
+2018-12-06 13:18:03,092 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerFeedBatchApplication on VTP3102 with PID 17624 (C:\projects\java\ProfileMigration\target\classes started by sr4mxl in C:\projects\java\ProfileMigration)
+2018-12-06 13:18:03,125 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: DEV
+2018-12-06 13:18:03,299 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Thu Dec 06 13:18:03 EST 2018]; root of context hierarchy
+2018-12-06 13:18:05,043 INFO org.springframework.beans.factory.support.DefaultListableBeanFactory [main] Overriding bean definition for bean 'transactionManager' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/batch/core/configuration/annotation/SimpleBatchConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=batchConfiguration; factoryMethodName=transactionManager; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/talbots/customer/feed/batch/BatchConfiguration.class]]
+2018-12-06 13:18:07,306 INFO org.springframework.jdbc.datasource.DriverManagerDataSource [main] Loaded JDBC driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+2018-12-06 13:18:08,130 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2018-12-06 13:18:08,138 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2018-12-06 13:18:08,386 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-12-06 13:18:09,840 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2018-12-06 13:18:11,189 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [main] HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2018-12-06 13:18:15,197 INFO org.springframework.orm.hibernate5.HibernateTransactionManager [main] Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@6273c5a4] of Hibernate SessionFactory for HibernateTransactionManager
+2018-12-06 13:18:17,097 INFO org.springframework.batch.core.repository.support.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: SQLSERVER
+2018-12-06 13:18:17,751 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2018-12-06 13:18:18,558 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2018-12-06 13:18:18,605 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerFeedBatchApplication in 17.576 seconds (JVM running for 20.592)
+2018-12-06 13:18:18,611 INFO org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner [main] Running default command line with: [--spring.output.ansi.enabled=always]
+2018-12-06 13:18:19,291 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] launched with the following parameters: [{-spring.output.ansi.enabled=always, run.id=15}]
+2018-12-06 13:18:19,476 INFO org.springframework.batch.core.job.SimpleStepHandler [main] Executing step: [step1]
+2018-12-06 13:18:20,046 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 112012897
+2018-12-06 13:18:20,048 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 112030688
+2018-12-06 13:18:20,048 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 112030688
+2018-12-06 13:18:20,049 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 112031885
+2018-12-06 13:18:20,050 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 112117634
+2018-12-06 13:18:20,051 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 119340590
+2018-12-06 13:18:20,051 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 119458879
+2018-12-06 13:18:20,052 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 127543897
+2018-12-06 13:18:20,053 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 136197265
+2018-12-06 13:18:20,053 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 138008101
+2018-12-06 13:18:20,054 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 1470082
+2018-12-06 13:18:20,054 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 15462240
+2018-12-06 13:18:20,054 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 15462240
+2018-12-06 13:18:20,055 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 16865830
+2018-12-06 13:18:20,056 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 189801077
+2018-12-06 13:18:20,056 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 189814045
+2018-12-06 13:18:20,057 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 189833647
+2018-12-06 13:18:20,057 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 189833890
+2018-12-06 13:18:20,057 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 194211124
+2018-12-06 13:18:20,058 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 19438340
+2018-12-06 13:18:20,058 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 203326346
+2018-12-06 13:18:20,059 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 203326346
+2018-12-06 13:18:20,059 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 203326346
+2018-12-06 13:18:20,059 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 203326346
+2018-12-06 13:18:20,060 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 205527919
+2018-12-06 13:18:20,060 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 20660546
+2018-12-06 13:18:20,061 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 20660546
+2018-12-06 13:18:20,061 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 208648008
+2018-12-06 13:18:20,062 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 208819451
+2018-12-06 13:18:20,062 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 208829712
+2018-12-06 13:18:20,062 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 208880092
+2018-12-06 13:18:20,063 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 212714730
+2018-12-06 13:18:20,063 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 216065728
+2018-12-06 13:18:20,064 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 219035470
+2018-12-06 13:18:20,064 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 219878012
+2018-12-06 13:18:20,065 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 222822870
+2018-12-06 13:18:20,065 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 222822870
+2018-12-06 13:18:20,065 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 222822870
+2018-12-06 13:18:20,066 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 222822870
+2018-12-06 13:18:20,066 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 227811267
+2018-12-06 13:18:20,066 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 228971579
+2018-12-06 13:18:20,067 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 228990326
+2018-12-06 13:18:20,067 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 228990326
+2018-12-06 13:18:20,068 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 229820143
+2018-12-06 13:18:20,068 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 229820328
+2018-12-06 13:18:20,068 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 229830141
+2018-12-06 13:18:20,069 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 232888043
+2018-12-06 13:18:20,070 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 238115259
+2018-12-06 13:18:20,070 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 2440148
+2018-12-06 13:18:20,070 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 246633560
+2018-12-06 13:18:20,071 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 247698852
+2018-12-06 13:18:20,071 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 247698852
+2018-12-06 13:18:20,072 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 250566930
+2018-12-06 13:18:20,072 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 254957964
+2018-12-06 13:18:20,073 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 259600206
+2018-12-06 13:18:20,073 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 259600206
+2018-12-06 13:18:20,073 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 259600206
+2018-12-06 13:18:20,074 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 25992490
+2018-12-06 13:18:20,074 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262465244
+2018-12-06 13:18:20,075 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262465244
+2018-12-06 13:18:20,075 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262466673
+2018-12-06 13:18:20,075 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262466673
+2018-12-06 13:18:20,076 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262561742
+2018-12-06 13:18:20,076 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262561742
+2018-12-06 13:18:20,076 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 262561742
+2018-12-06 13:18:20,077 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263000094
+2018-12-06 13:18:20,077 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263000094
+2018-12-06 13:18:20,078 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263000094
+2018-12-06 13:18:20,078 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263001495
+2018-12-06 13:18:20,078 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263001495
+2018-12-06 13:18:20,079 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263085868
+2018-12-06 13:18:20,079 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263085868
+2018-12-06 13:18:20,079 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150065
+2018-12-06 13:18:20,080 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150065
+2018-12-06 13:18:20,080 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150065
+2018-12-06 13:18:20,081 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150065
+2018-12-06 13:18:20,081 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150184
+2018-12-06 13:18:20,081 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150184
+2018-12-06 13:18:20,082 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150184
+2018-12-06 13:18:20,082 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150184
+2018-12-06 13:18:20,083 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150870
+2018-12-06 13:18:20,083 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150870
+2018-12-06 13:18:20,084 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150870
+2018-12-06 13:18:20,084 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150870
+2018-12-06 13:18:20,084 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150992
+2018-12-06 13:18:20,085 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150992
+2018-12-06 13:18:20,085 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263150992
+2018-12-06 13:18:20,085 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263151292
+2018-12-06 13:18:20,086 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263530042
+2018-12-06 13:18:20,086 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263530042
+2018-12-06 13:18:20,087 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263531158
+2018-12-06 13:18:20,087 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263531158
+2018-12-06 13:18:20,087 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263531158
+2018-12-06 13:18:20,088 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263531158
+2018-12-06 13:18:20,088 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 263531158
+2018-12-06 13:18:20,089 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 273168392
+2018-12-06 13:18:20,089 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 273630857
+2018-12-06 13:18:20,089 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 275770094
+2018-12-06 13:18:20,090 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 275844891
+2018-12-06 13:18:20,090 INFO com.talbots.customer.feed.batch.service.CustomerFeedProcessor [main] Processing customer number 275844891
+2018-12-06 13:18:20,095 INFO org.springframework.oxm.jaxb.Jaxb2Marshaller [main] Creating JAXBContext with classes to be bound [class com.talbots.customer.feed.domain.Customer]
+2018-12-06 13:18:20,698 INFO org.springframework.batch.core.launch.support.SimpleJobLauncher$1 [main] Job: [FlowJob: [name=exportCustomerFeedJob]] completed with the following parameters: [{-spring.output.ansi.enabled=always, run.id=15}] and the following status: [COMPLETED]
+2018-12-06 13:18:20,702 INFO org.springframework.context.support.AbstractApplicationContext [Thread-2] Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7a8c8dcf: startup date [Thu Dec 06 13:18:03 EST 2018]; root of context hierarchy
+2018-12-06 13:18:20,706 INFO org.springframework.jmx.export.MBeanExporter [Thread-2] Unregistering JMX-exposed beans on shutdown
